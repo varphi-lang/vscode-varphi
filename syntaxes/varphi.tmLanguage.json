@@ -1,0 +1,46 @@
+{
+    "name": "Varphi",
+    "scopeName": "source.varphi",
+    "fileTypes": ["vp"],
+    "patterns": [
+      {
+        "name": "comment.line.double-slash.varphi",
+        "match": "//.*$"
+      },
+      {
+        "name": "comment.block.varphi",
+        "begin": "/\\*",
+        "end": "\\*/",
+        "patterns": [
+          {
+            "match": "\\*\\/",
+            "name": "punctuation.definition.comment.end.varphi"
+          }
+        ]
+      },
+      {
+        "name": "keyword.control.varphi",
+        "match": "\\bL\\b|\\bR\\b"
+      },
+      {
+        "name": "constant.numeric.varphi",
+        "match": "\\b1\\b|\\b0\\b"
+      },
+      {
+        "name": "entity.name.type.state.varphi",
+        "match": "\\bq[a-zA-Z0-9_]+\\b"
+      }
+    ],
+    "repository": {
+      "whitespace": {
+        "patterns": [
+          {
+            "match": "\\s+",
+            "name": "text.whitespace.varphi"
+          }
+        ]
+      }
+    },
+    "uuid": "c43f2ab4-6a14-4d25-9876-59f6cf1d3df2"
+  }
+  

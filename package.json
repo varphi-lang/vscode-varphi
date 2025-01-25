@@ -1,0 +1,111 @@
+{
+  "name": "varphi",
+  "displayName": "Varphi",
+  "description": "Varphi Extension for Visual Studio Code",
+  "author": {
+    "name": "Hassan El-Sheikha"
+  },
+  "publisher": "Varphi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/varphi-lang/vscode-varphi"
+  },
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "language": "varphi",
+        "scopeName": "source.varphi",
+        "path": "./syntaxes/varphi.tmLanguage.json"
+      }
+    ],
+    "breakpoints": [
+      {
+        "language": "varphi"
+      }
+    ],
+    "languages": [
+      {
+        "id": "varphi",
+        "aliases": [
+          "Varphi",
+          "varphi"
+        ],
+        "extensions": [
+          ".vp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "varphi",
+        "label": "Varphi",
+        "program": "",
+        "configurationAttributes": {
+          "launch": {
+            "required": [
+              "sourcePath",
+              "tape"
+            ],
+            "properties": {
+              "sourcePath": {
+                "type": "string",
+                "description": "The path of the program to debug."
+              },
+              "tape": {
+                "type": "string",
+                "description": "The tape as a string (\"1\" for tally, \"0\" for blank)."
+              }
+            }
+          }
+        }
+      }
+    ],
+    "configuration": {
+      "title": "Varphi",
+      "properties": {
+        "varphi.interpreterPath": {
+          "type": "string",
+          "description": "Path to the Varphi Interpreter (vpi)."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "varphi.run",
+        "title": "Run Program",
+        "icon": "$(run)"
+      },
+      {
+        "command": "varphi.debug",
+        "title": "Debug Program",
+        "icon": "$(debug-alt)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "varphi.run",
+          "when": "editorLangId == varphi",
+          "group": "navigation"
+        },
+        {
+          "command": "varphi.debug",
+          "when": "editorLangId == varphi",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "main": "./src/extension.js",
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  }
+}
