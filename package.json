@@ -1,28 +1,31 @@
 {
   "name": "varphi",
   "displayName": "Varphi",
-  "description": "Varphi Extension for Visual Studio Code",
+  "description": "Official Varphi Extension for Visual Studio Code",
+  "version": "1.0.0",
+  "icon": "assets/varphi_icon.png",
   "author": {
     "name": "Hassan El-Sheikha"
   },
-  "publisher": "Varphi",
+  "publisher": "varphi-lang",
   "repository": {
     "type": "git",
     "url": "https://github.com/varphi-lang/vscode-varphi"
   },
-  "version": "1.0.0",
+  "license": "SEE LICENSE IN LICENSE",
   "engines": {
     "vscode": "^1.94.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Debuggers"
   ],
   "contributes": {
     "grammars": [
       {
         "language": "varphi",
         "scopeName": "source.varphi",
-        "path": "./syntaxes/varphi.tmLanguage.json"
+        "path": "./varphi.tmLanguage.json"
       }
     ],
     "breakpoints": [
@@ -102,9 +105,16 @@
           "group": "navigation"
         }
       ]
-    }
+    },
+    "iconThemes": [
+        {
+          "id": "varphi-icons",
+          "label": "Varphi Icons",
+          "path": "./varphi-icon-theme.json"
+        }
+      ]
   },
-  "main": "./src/extension.js",
+  "main": "./extension.js",
   "dependencies": {
     "vscode-languageclient": "^9.0.1"
   }
