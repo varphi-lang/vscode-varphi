@@ -1,0 +1,10 @@
+{
+    "iconDefinitions": {
+      "_vp_file": {
+        "iconPath": "./assets/varphi_icon.png"
+      }
+    },
+    "fileExtensions": {
+      "vp": "_vp_file"
+    }
+}
