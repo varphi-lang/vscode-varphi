@@ -43,7 +43,11 @@
         "extensions": [
           ".vp"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "assets/varphi_icon.png",
+          "dark": "assets/varphi_icon.png"
+        }
       }
     ],
     "debuggers": [
@@ -105,14 +109,7 @@
           "group": "navigation"
         }
       ]
-    },
-    "iconThemes": [
-        {
-          "id": "varphi-icons",
-          "label": "Varphi Icons",
-          "path": "./varphi-icon-theme.json"
-        }
-      ]
+    }
   },
   "main": "./extension.js",
   "dependencies": {
