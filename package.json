@@ -2,7 +2,7 @@
   "name": "varphi",
   "displayName": "Varphi",
   "description": "Official Varphi Extension for Visual Studio Code",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "icon": "assets/varphi_icon.png",
   "publisher": "varphi-lang",
   "repository": {
