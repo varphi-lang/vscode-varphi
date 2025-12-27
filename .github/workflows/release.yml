@@ -3,10 +3,11 @@ on:
     tags:
       - "v*"
 
-name: Deploy Extension to VS Marketplace
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: vscode-marketplace
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
