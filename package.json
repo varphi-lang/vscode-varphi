@@ -2,11 +2,8 @@
   "name": "varphi",
   "displayName": "Varphi",
   "description": "Official Varphi Extension for Visual Studio Code",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "icon": "assets/varphi_icon.png",
-  "author": {
-    "name": "Hassan El-Sheikha"
-  },
   "publisher": "varphi-lang",
   "repository": {
     "type": "git",
@@ -14,18 +11,24 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
-    "vscode": "^1.94.0"
+    "vscode": "^1.75.0"
   },
   "categories": [
     "Programming Languages",
     "Debuggers"
   ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
   "contributes": {
     "grammars": [
       {
         "language": "varphi",
         "scopeName": "source.varphi",
-        "path": "./varphi.tmLanguage.json"
+        "path": "./syntaxes/varphi.tmLanguage.json"
       }
     ],
     "breakpoints": [
@@ -57,18 +60,20 @@
         "program": "",
         "configurationAttributes": {
           "launch": {
-            "required": [
-              "sourcePath",
-              "tape"
-            ],
+            "required": [ "sourcePath" ],
             "properties": {
               "sourcePath": {
                 "type": "string",
-                "description": "The path of the program to debug."
+                "description": "The path of the program to debug.",
+                "default": "${file}"
               },
-              "tape": {
-                "type": "string",
-                "description": "The tape as a string (\"1\" for tally, \"0\" for blank)."
+              "tapes": {
+                "type": "array",
+                "description": "List of initial tape contents.",
+                "default": [],
+                "items": {
+                    "type": "string"
+                }
               }
             }
           }
@@ -80,7 +85,8 @@
       "properties": {
         "varphi.interpreterPath": {
           "type": "string",
-          "description": "Path to the Varphi Interpreter (vpi)."
+          "description": "Path to the Varphi Interpreter (vpi). Must not include spaces.",
+          "default": "varphi"
         }
       }
     },
@@ -111,8 +117,12 @@
       ]
     }
   },
-  "main": "./extension.js",
   "dependencies": {
     "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.x",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.x"
   }
 }

@@ -6,14 +6,14 @@ Welcome to the Varphi Language Extension for Visual Studio Code! This extension 
 
 - **File Icon Support:** Enjoy a consistent visual experience with custom file icons that work seamlessly across all themes.
 - **Syntax Coloring:** Benefit from enhanced syntax highlighting tailored specifically for Varphi, improving code readability.
-- **Seamless Integration:** Run your Varphi programs directly in the IDE—no command line needed.
-- **Built-In Debugging:** Easily debug your Varphi programs using the robust VS Code debugging environment.
+- **Seamless Integration:** Run your Varphi programs directly in the IDE; no command line needed.
+- **Built-In Debugging:** Easily debug your Varphi programs using the VS Code debugging environment.
 
 ## Installation
 
 1. **Open VS Code:** Launch your Visual Studio Code editor.
 2. **Access Extensions:** Click on the Extensions icon in the Activity Bar or press `Ctrl+Shift+X` (or `Cmd+Shift+X` on macOS).
-3. **Search for Varphi:** Enter "Varphi Language Extension" in the search bar.
+3. **Search for Varphi:** Enter "Varphi" in the search bar.
 4. **Install:** Click the **Install** button to add the extension to your editor.
 
 ## Usage

@@ -2,6 +2,13 @@
 
 All notable changes to the "varphi" extension will be documented in this file.
 
+## [2.0.0] - 2025-12-27
+
+### Added
+
+- Added complete support for Varphi v2.0.11
+
+
 ## [1.0.0] - 2025-01-31
 
 ### Added

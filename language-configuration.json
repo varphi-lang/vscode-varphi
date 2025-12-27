@@ -1,8 +1,16 @@
 {
-    "comments": {
-        // symbol used for single line comment.
-        "lineComment": "//",
-        // symbols used for start and end a block comment.
-        "blockComment": [ "/*", "*/" ]
-    }
+  "comments": {
+    "lineComment": "//",
+    "blockComment": ["/*", "*/"]
+  },
+  "brackets": [
+    ["(", ")"]
+  ],
+  "autoClosingPairs": [
+    { "open": "(", "close": ")" },
+    { "open": "/*", "close": "*/" }
+  ],
+  "surroundingPairs": [
+    { "open": "(", "close": ")" }
+  ]
 }

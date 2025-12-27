@@ -1,0 +1,81 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Varphi",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#punctuation"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.varphi",
+          "match": "\\b(LEFT|RIGHT|STAY|BLANK)\\b"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.varphi",
+          "match": "\\$[a-zA-Z0-9_]+"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.varphi",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.varphi",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.numeric.varphi",
+          "match": "\\b[0-9]+\\b"
+        },
+        {
+          "name": "entity.name.function.state.varphi",
+          "match": "\\b[a-zA-Z0-9_]+\\b"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.parenthesis.begin.varphi",
+          "match": "\\("
+        },
+        {
+          "name": "punctuation.parenthesis.end.varphi",
+          "match": "\\)"
+        },
+        {
+          "name": "punctuation.separator.comma.varphi",
+          "match": ","
+        }
+      ]
+    }
+  },
+  "scopeName": "source.varphi"
+}
